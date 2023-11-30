@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 // Route to handle POST request
 app.post('/api/random-number', (req, res) => {
+    console.log("Request received on /api/random-number");
     const name = req.body.name;
     const number = Math.floor(Math.random() * 100) + 1;
     res.json({ name: name, number: number });
